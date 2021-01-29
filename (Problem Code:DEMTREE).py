@@ -35,7 +35,7 @@ for i in range(s):
             s_stored[edge] = np.array(s_stored[vertex])
 
 for i in range(q):
-   first, second, max_cost = queries[
+   first, second, max_cost = queries[i]
    bool_array = np.zeros(max_cost+2,dtype=bool)
    for j in range(s):
       bool_array = np.logical_or(bool_array,np.logical_and(stored[j][first][:max_cost+2],stored[j][second][:max_cost+2]))
